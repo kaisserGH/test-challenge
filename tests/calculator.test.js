@@ -1,24 +1,17 @@
-const { default: expect } = require('expect');
+const fizzBuzz = require('../fizzBuzz');
 
-const calculator = require('../calculator');
+test('If the number is divisible by 3, return Fizz', () => {
+  expect(fizzBuzz(33)).toBe('Fizz');
+});
 
-test('adds a + b', () => {
-    //
-})
+test('If the number is divisible by 5, return Buzz', () => {
+  expect(fizzBuzz(25)).toBe('Buzz');
+});
 
-test('substracts a - b', () => {
-   //
-})
+test('If the number is divisible by 3 and 5, return FizzBuzz', () => {
+  expect(fizzBuzz(30)).toBe('FizzBuzz');
+});
 
-test('multiplies a * b', () => {
-    //
-})
-
-test('divides a / b', () => {
-    // Consider decimals
-})
-
-test('Raises to power a ^ b', () => {
-    //
-})
-
+test('Else, return the number passed as an argument', () => {
+  expect(fizzBuzz(2)).toBe(2);
+});
